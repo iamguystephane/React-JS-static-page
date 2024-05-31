@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+function Header(){
+  return(
+    <nav>
+      <div className="left-nav">
+        <img src="logo192.png" width="60px" alt="React logo"></img>
+        <h3> React Facts </h3>
+      </div>
+      <div className="right-nav">
+        <h4> React Course - project 1</h4>
+      </div>
+    </nav>
   );
 }
 
-export default App;
+function MainContent(){
+  return(
+    <main>
+      <h1> Fun facts about React </h1>
+      <ul>
+        <li> Was first released in 2013 </li>
+        <li> Was originally created by Jordan Walke </li>
+        <li> Has well over 100k stars on Github </li>
+        <li> Is maintained by Facebook </li>
+        <li> Powers thousands of enterprise apps, including mobile apps </li>
+      </ul>
+    </main>
+  )
+}
+
+function Page(){
+  return (
+    <div>
+      <header>
+        <Header />
+      </header>
+      <MainContent />
+    </div>
+  )
+}
+
+export default Page;
